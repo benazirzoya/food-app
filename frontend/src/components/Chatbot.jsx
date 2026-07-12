@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaPaperPlane, FaCommentDots, FaTimes, FaCircle, FaSync } from "react-icons/fa";
+import { FaPaperPlane, FaTimes, FaCircle, FaSync } from "react-icons/fa";
 
 function Chatbot() {
   const [isOpen, setIsOpen] = useState(false);

@@ -133,6 +133,58 @@ function WalkingChef({ top }) {
   );
 }
 
+const navItems = [
+  {
+    name: "Home",
+    path: "/",
+  },
+
+  {
+    name: "Gallery",
+    path: "/gallery",
+  },
+
+  {
+    name: "Offers",
+    path: "/offers",
+  },
+
+  {
+    name: "Reviews",
+    path: "/reviews",
+  },
+
+  {
+    name: "Download",
+    path: "/download",
+  },
+
+  {
+    name: "Hotels",
+    path: "/hotels",
+  },
+
+  {
+    name: "Orders",
+    path: "/orders",
+  },
+
+  {
+    name: "Wishlist",
+    path: "/wishlist",
+  },
+
+  {
+    name: "About",
+    path: "/about",
+  },
+
+  {
+    name: "Contact",
+    path: "/contact",
+  },
+];
+
 /* =========================================
    NAVBAR
 ========================================= */
@@ -160,58 +212,6 @@ function Navbar() {
   const linkRefs = useRef([]);
 
   const [chefTop, setChefTop] = useState(null);
-
-  const navItems = [
-    {
-      name: "Home",
-      path: "/",
-    },
-
-    {
-      name: "Gallery",
-      path: "/gallery",
-    },
-
-    {
-      name: "Offers",
-      path: "/offers",
-    },
-
-    {
-      name: "Reviews",
-      path: "/reviews",
-    },
-
-    {
-      name: "Download",
-      path: "/download",
-    },
-
-    {
-      name: "Hotels",
-      path: "/hotels",
-    },
-
-    {
-      name: "Orders",
-      path: "/orders",
-    },
-
-    {
-      name: "Wishlist",
-      path: "/wishlist",
-    },
-
-    {
-      name: "About",
-      path: "/about",
-    },
-
-    {
-      name: "Contact",
-      path: "/contact",
-    },
-  ];
 
   /* =========================================
      CHEF POSITION
