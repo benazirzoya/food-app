@@ -105,7 +105,7 @@ function Cart() {
     }
 
     try {
-      const API_BASE = "http://" + window.location.hostname + ":5000";
+      const API_BASE = process.env.REACT_APP_API_URL || ("http://" + window.location.hostname + ":5000");
       await axios.post(API_BASE + "/api/orders", {
         userId: currentUserId,
         items: cart,

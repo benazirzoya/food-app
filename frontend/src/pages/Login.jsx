@@ -13,6 +13,7 @@ import {
 import { useNavigate } from "react-router-dom";
 
 function Login({ setIsAuth }) {
+  const API_BASE = process.env.REACT_APP_API_URL || ("http://" + window.location.hostname + ":5000");
 
   const navigate = useNavigate();
 
@@ -67,7 +68,7 @@ function Login({ setIsAuth }) {
     try {
 
       const res = await axios.post(
-        "http://" + window.location.hostname + ":5000/api/auth/login",
+        API_BASE + "/api/auth/login",
         {
           email: formData.email,
           password: formData.password,
@@ -124,7 +125,7 @@ function Login({ setIsAuth }) {
     try {
 
       await axios.post(
-        "http://" + window.location.hostname + ":5000/api/auth/register",
+        API_BASE + "/api/auth/register",
         {
           name: formData.name,
           email: formData.email,

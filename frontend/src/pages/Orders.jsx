@@ -26,7 +26,7 @@ function Orders() {
         const userObj = savedUser ? JSON.parse(savedUser) : null;
         const currentUserId = userObj ? (userObj.id || userObj._id) : "guest";
 
-        const API_BASE = "http://" + window.location.hostname + ":5000";
+        const API_BASE = process.env.REACT_APP_API_URL || ("http://" + window.location.hostname + ":5000");
         const res = await axios.get(API_BASE + "/api/orders", { timeout: 5000 });
         
         // Filter and format orders for current user
@@ -109,7 +109,7 @@ function Orders() {
         return;
       }
 
-      const API_BASE = "http://" + window.location.hostname + ":5000";
+      const API_BASE = process.env.REACT_APP_API_URL || ("http://" + window.location.hostname + ":5000");
       await axios.delete(API_BASE + `/api/orders/${id}`);
       setOrders(orders.filter((o) => o.id !== id));
       alert("Order Cancelled Successfully");
