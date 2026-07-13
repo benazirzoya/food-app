@@ -108,3 +108,15 @@ The app dynamically resolves the backend URL to match the current browser locati
 1. Create a Web Service and set the **Root Directory** to `backend`.
 2. Configure your environmental variables (`MONGO_URI`, `JWT_SECRET`).
 3. Set build command to `npm install` and start command to `node server.js`.
+
+---
+
+## 👩‍💻 Developer Info
+
+**Benazir Zoya**
+- **Portfolio**: [portfolio-rho-tan-16.vercel.app](https://portfolio-rho-tan-16.vercel.app)
+- **GitHub**: [@benazirzoya](https://github.com/benazirzoya)
+- **LinkedIn**: [Benazir Banu](https://www.linkedin.com/in/benazir-banu)
+- **Instagram**: [@benazir1822](https://www.instagram.com/benazir1822)
+- **Twitter/X**: [@benriq18](https://twitter.com/benriq18)
+- **Email**: [benriq18@gmail.com](mailto:benriq18@gmail.com)
