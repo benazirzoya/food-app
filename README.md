@@ -4,6 +4,22 @@ Foodie is a feature-rich, high-performance, dark-themed food ordering web applic
 
 ---
 
+## 📸 App Screenshots
+
+### 🏠 Landing Page
+![Landing Page Screenshot](screenshots/home.jpg)
+
+### 🍔 Interactive Food Gallery
+![Gallery Page Screenshot](screenshots/gallery.jpg)
+
+### 👤 Profile Image Registration
+![Registration Screenshot](screenshots/login.jpg)
+
+### 🤖 Cute Anime Chatbot Support
+![Chatbot Screenshot](screenshots/chatbot.jpg)
+
+---
+
 ## 🌟 Key Features
 
 1. **Vibrant Glassmorphic UI**: High-fidelity dark mode styling with neon highlights, custom Google Fonts, and spring animations.
