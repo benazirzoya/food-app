@@ -1,4 +1,4 @@
-# Foodie - Ultimate Food Delivery App Clone 🍕🍔
+# Foodie - Ultimate Food Delivery App 🍕🍔
 
 Foodie is a feature-rich, high-performance, dark-themed food ordering web application built using the MERN stack (React, Node, Express, MongoDB). It features a sleek glassmorphic UI, smooth Framer Motion animations, a simulated 3D Chef model, custom user avatar file uploads, and a highly resilient architecture.
 
