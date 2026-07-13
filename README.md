@@ -4,7 +4,7 @@ Foodie is a feature-rich, high-performance, dark-themed food ordering web applic
 
 ---
 
-## 📸 App Screenshots
+## 📸 App 
 
 ### 🏠 Landing Page
 ![Landing Page Screenshot](screenshots/home.jpg)
