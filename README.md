@@ -1,10 +1,10 @@
-# Foodie - Ultimate Food Delivery App Clone 🍕🍔
+# Foodie - Ultimate Food Delivery App 🍕🍔
 
 Foodie is a feature-rich, high-performance, dark-themed food ordering web application built using the MERN stack (React, Node, Express, MongoDB). It features a sleek glassmorphic UI, smooth Framer Motion animations, a simulated 3D Chef model, custom user avatar file uploads, and a highly resilient architecture.
 
 ---
 
-## 📸 App Screenshots
+## 📸 App 
 
 ### 🏠 Landing Page
 ![Landing Page Screenshot](screenshots/home.jpg)
@@ -41,48 +41,6 @@ Foodie is a feature-rich, high-performance, dark-themed food ordering web applic
 
 ---
 
-## 🚀 Local Installation & Setup
-
-### Prerequisites
-- Node.js installed on your system.
-
-### 1. Setup the Backend
-1. Navigate to the backend directory:
-   ```bash
-   cd backend
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Configure your environmental variables inside a `.env` file:
-   ```env
-   PORT=5000
-   MONGO_URI=your_mongodb_connection_string
-   JWT_SECRET=your_secret_key
-   ```
-4. Start the development server:
-   ```bash
-   npm run dev
-   ```
-
-### 2. Setup the Frontend
-1. Navigate to the frontend directory:
-   ```bash
-   cd frontend
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Start the React development server:
-   ```bash
-   npm start
-   ```
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
-
----
-
 ## 📱 Local Network Testing (Mobile/Tablet)
 
 The app dynamically resolves the backend URL to match the current browser location (`window.location.hostname`), allowing testing on local devices under the same Wi-Fi connection:
@@ -94,20 +52,6 @@ The app dynamically resolves the backend URL to match the current browser locati
      ```powershell
      New-NetFirewallRule -Name "AllowNodeAPI" -DisplayName "Allow Node API Port 5000" -Direction Inbound -Action Allow -Protocol TCP -LocalPort 5000
      ```
-
----
-
-## ☁️ Deployment Guide
-
-### Frontend (Vercel)
-1. Import your GitHub repository into Vercel.
-2. Configure the **Root Directory** setting to `frontend`.
-3. Click **Deploy**.
-
-### Backend (Render / Railway)
-1. Create a Web Service and set the **Root Directory** to `backend`.
-2. Configure your environmental variables (`MONGO_URI`, `JWT_SECRET`).
-3. Set build command to `npm install` and start command to `node server.js`.
 
 ---
 
