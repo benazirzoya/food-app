@@ -13,7 +13,7 @@ import {
 import { useNavigate } from "react-router-dom";
 
 function Login({ setIsAuth }) {
-  const API_BASE = process.env.REACT_APP_API_URL || ("http://" + window.location.hostname + ":5000");
+  const API_BASE = process.env.REACT_APP_API_URL || (window.location.hostname.includes("vercel.app") ? "https://food-app-backend-3k05.onrender.com" : ("http://" + window.location.hostname + ":5000"));
 
   const navigate = useNavigate();
 

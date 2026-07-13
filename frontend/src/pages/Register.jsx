@@ -11,7 +11,7 @@ function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const API_BASE = process.env.REACT_APP_API_URL || ('http://' + window.location.hostname + ':5000');
+    const API_BASE = process.env.REACT_APP_API_URL || (window.location.hostname.includes("vercel.app") ? "https://food-app-backend-3k05.onrender.com" : ('http://' + window.location.hostname + ':5000'));
     await axios.post(
       API_BASE + '/api/auth/register',
       form

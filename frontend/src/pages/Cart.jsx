@@ -105,7 +105,7 @@ function Cart() {
     }
 
     try {
-      const API_BASE = process.env.REACT_APP_API_URL || ("http://" + window.location.hostname + ":5000");
+      const API_BASE = process.env.REACT_APP_API_URL || (window.location.hostname.includes("vercel.app") ? "https://food-app-backend-3k05.onrender.com" : ("http://" + window.location.hostname + ":5000"));
       await axios.post(API_BASE + "/api/orders", {
         userId: currentUserId,
         items: cart,
