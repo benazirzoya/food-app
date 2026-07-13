@@ -1,0 +1,126 @@
+<!--
+  Copy and paste the entire HTML content below directly into the "HTML View" tab of your Blogger post editor.
+  It is styled with inline CSS matching the modern Foodie app theme!
+-->
+<div style="font-family: 'Inter', 'Segoe UI', Roboto, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; color: #f3f4f6; background-color: #0b0f19; border-radius: 16px; border: 1px solid rgba(255, 255, 255, 0.05); line-height: 1.7; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+
+  <!-- HEADER -->
+  <div style="text-align: center; margin-bottom: 40px; padding-bottom: 20px; border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
+    <h1 style="color: #ef4444; font-size: 2.2rem; font-weight: 800; margin-bottom: 10px;">Building Foodie: A Resilient MERN Stack Food App with 3D Graphics &amp; Local DB Fallbacks</h1>
+    <p style="color: #9ca3af; font-size: 1rem; margin: 0;">Developed by <strong style="color: #fbbf24;">Benazir Zoya</strong> | Published on July 13, 2026</p>
+  </div>
+
+  <!-- INTRODUCTION -->
+  <p style="font-size: 1.1rem; color: #d1d5db; margin-bottom: 25px;">
+    In modern web development, creating a basic clone app is no longer enough to stand out. To build something truly premium, a developer must merge <strong>visual excellence</strong> with <strong>high-reliability engineering</strong>. 
+  </p>
+  <p style="font-size: 1.1rem; color: #d1d5db; margin-bottom: 30px;">
+    In this post, I will share the journey of building <strong>Foodie</strong>, a high-fidelity dark-themed MERN stack food delivery application clone. It features an interactive 3D Chef model, custom user profile uploads, and an automated database fallback system that maintains 100% uptime even if MongoDB Atlas goes offline!
+  </p>
+
+  <!-- SCREENSHOT 1 -->
+  <div style="text-align: center; margin: 35px 0;">
+    <img src="https://raw.githubusercontent.com/benazirzoya/food-app/main/screenshots/home.jpg" alt="Foodie Homepage mockup" style="max-width: 100%; border-radius: 12px; border: 2px solid rgba(239, 68, 68, 0.3); box-shadow: 0 8px 24px rgba(239, 68, 68, 0.15);" />
+    <p style="font-size: 0.85rem; color: #9ca3af; margin-top: 8px;">Figure 1: Foodie landing page showcasing modern neon glassmorphic cards.</p>
+  </div>
+
+  <!-- SECTION 1 -->
+  <h2 style="color: #f87171; font-size: 1.5rem; margin-top: 40px; margin-bottom: 15px; border-left: 4px solid #ef4444; padding-left: 12px;">1. Vibrant UI Layout &amp; Interactive Three.js 3D Chef</h2>
+  <p style="color: #d1d5db; margin-bottom: 20px;">
+    Aesthetics are the heartbeat of Foodie. Utilizing vanilla CSS variables combined with Framer Motion springs, I created a premium dark-themed experience highlighted by neon red and gold navigation tabs.
+  </p>
+  <p style="color: #d1d5db; margin-bottom: 25px;">
+    To add an extra level of interactivity, I integrated a <strong>3D Chef model</strong> directly into the navigation panel using React Three Fiber. The model dynamically walks and aligns its position on the Y-axis to match whichever navigation tab is hovered or active, bridging 3D game mechanics with standard web layouts.
+  </p>
+
+  <!-- SCREENSHOT 2 -->
+  <div style="text-align: center; margin: 35px 0;">
+    <img src="https://raw.githubusercontent.com/benazirzoya/food-app/main/screenshots/login.jpg" alt="Registration Uploader Preview" style="max-width: 100%; border-radius: 12px; border: 2px solid rgba(239, 68, 68, 0.3); box-shadow: 0 8px 24px rgba(239, 68, 68, 0.15);" />
+    <p style="font-size: 0.85rem; color: #9ca3af; margin-top: 8px;">Figure 2: Client-side profile image file upload with real-time preview thumbnail.</p>
+  </div>
+
+  <!-- SECTION 2 -->
+  <h2 style="color: #f87171; font-size: 1.5rem; margin-top: 40px; margin-bottom: 15px; border-left: 4px solid #ef4444; padding-left: 12px;">2. Native File Uploads &amp; Base64 Profile Rendering</h2>
+  <p style="color: #d1d5db; margin-bottom: 20px;">
+    Pasting URLs for profile pictures is clunky. To elevate user experience, I built an HTML5 file input selector that accepts native images. When selected, the client-side JavaScript reads the file using a <code>FileReader</code> and compiles it into a Base64 data string.
+  </p>
+  <p style="color: #d1d5db; margin-bottom: 25px;">
+    This Base64 string is stored directly inside MongoDB Atlas under the user's record and echoed in JSON tokens. The custom profile photo then populates dynamically across the app: the sidebar, simulated checkout forms, live order timelines, and review cards.
+  </p>
+
+  <!-- SCREENSHOT 3 -->
+  <div style="text-align: center; margin: 35px 0;">
+    <img src="https://raw.githubusercontent.com/benazirzoya/food-app/main/screenshots/gallery.jpg" alt="Interactive Food Menu Grid" style="max-width: 100%; border-radius: 12px; border: 2px solid rgba(239, 68, 68, 0.3); box-shadow: 0 8px 24px rgba(239, 68, 68, 0.15);" />
+    <p style="font-size: 0.85rem; color: #9ca3af; margin-top: 8px;">Figure 3: Interactive food menu gallery grid with hover motion effects.</p>
+  </div>
+
+  <!-- SECTION 3 -->
+  <h2 style="color: #f87171; font-size: 1.5rem; margin-top: 40px; margin-bottom: 15px; border-left: 4px solid #ef4444; padding-left: 12px;">3. Un-Crashable Database: Mongoose Local File Fallback</h2>
+  <p style="color: #d1d5db; margin-bottom: 20px;">
+    Cloud databases are excellent, but connection strings can fail on changing networks due to IP whitelist constraints (a common issue with MongoDB Atlas during public Wi-Fi testing).
+  </p>
+  <p style="color: #d1d5db; margin-bottom: 25px;">
+    To solve this, I designed a <strong>Local Database Fallback System</strong> (<code>localDb.js</code>). If Express fails to select or connect to MongoDB Atlas, it hot-swaps all authentication, registration, and order transactions to a local JSON file database (<code>data_db.json</code>) on the fly. The app continues to work without showing a single "Server Error"!
+  </p>
+
+  <!-- SCREENSHOT 4 -->
+  <div style="text-align: center; margin: 35px 0;">
+    <img src="https://raw.githubusercontent.com/benazirzoya/food-app/main/screenshots/chatbot.jpg" alt="Anime Chatbot Panel Preview" style="max-width: 100%; border-radius: 12px; border: 2px solid rgba(239, 68, 68, 0.3); box-shadow: 0 8px 24px rgba(239, 68, 68, 0.15);" />
+    <p style="font-size: 0.85rem; color: #9ca3af; margin-top: 8px;">Figure 4: Cute anime avatar floating chatbot widget with refresh controls.</p>
+  </div>
+
+  <!-- SECTION 4 -->
+  <h2 style="color: #f87171; font-size: 1.5rem; margin-top: 40px; margin-bottom: 15px; border-left: 4px solid #ef4444; padding-left: 12px;">4. Chibi Anime Chatbot Support Widget</h2>
+  <p style="color: #d1d5db; margin-bottom: 25px;">
+    Support should feel fun. The bottom right features a floating chatbot widget decorated with a cute chibi anime avatar. The chat logs support conversation logs clearing and reset controls, ensuring users can restart their conversations at any time.
+  </p>
+
+  <!-- SUMMARY TABLE -->
+  <div style="margin: 30px 0; overflow-x: auto;">
+    <table style="width: 100%; border-collapse: collapse; border: 1px solid rgba(255, 255, 255, 0.1); background-color: rgba(255, 255, 255, 0.02);">
+      <thead>
+        <tr style="background-color: rgba(239, 68, 68, 0.15); border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
+          <th style="padding: 10px; text-align: left; color: #fbbf24; font-size: 0.9rem;">Component</th>
+          <th style="padding: 10px; text-align: left; color: #fbbf24; font-size: 0.9rem;">Tech Stack Used</th>
+          <th style="padding: 10px; text-align: left; color: #fbbf24; font-size: 0.9rem;">Main Feature</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+          <td style="padding: 10px; font-size: 0.85rem;">Frontend Client</td>
+          <td style="padding: 10px; font-size: 0.85rem; font-family: monospace;">React.js, Three.js, Framer Motion</td>
+          <td style="padding: 10px; font-size: 0.85rem;">3D Walking Chef, Glassmorphic Neon panels</td>
+        </tr>
+        <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
+          <td style="padding: 10px; font-size: 0.85rem;">Backend Server</td>
+          <td style="padding: 10px; font-size: 0.85rem; font-family: monospace;">Node.js, Express.js, JWT, Bcryptjs</td>
+          <td style="padding: 10px; font-size: 0.85rem;">Dynamic CORS mirror middleware, 10MB payloads</td>
+        </tr>
+        <tr>
+          <td style="padding: 10px; font-size: 0.85rem;">Storage Layer</td>
+          <td style="padding: 10px; font-size: 0.85rem; font-family: monospace;">MongoDB Atlas &amp; Local data_db.json</td>
+          <td style="padding: 10px; font-size: 0.85rem;">Automatic database selection failover system</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- CONCLUSION -->
+  <h2 style="color: #f87171; font-size: 1.5rem; margin-top: 40px; margin-bottom: 15px; border-left: 4px solid #ef4444; padding-left: 12px;">Conclusion &amp; Project Links</h2>
+  <p style="color: #d1d5db; margin-bottom: 25px;">
+    Building Foodie was a fantastic challenge that combined 3D canvas mechanics, client-side media buffers, and failover backend database routing. By designing the app to adapt dynamically to deployment hosts and network adapters, it works flawlessly in both local network sandbox tests and production cloud domains.
+  </p>
+
+  <!-- DEVELOPER FOOTER CARD -->
+  <div style="background-color: rgba(251, 191, 36, 0.05); border: 1px solid rgba(251, 191, 36, 0.2); border-radius: 12px; padding: 20px; margin-top: 40px; text-align: center;">
+    <h3 style="color: #fbbf24; margin: 0 0 10px 0; font-size: 1.2rem;">Connect with the Developer</h3>
+    <p style="color: #d1d5db; margin: 0 0 15px 0; font-size: 0.95rem;">If you would like to explore the source code, check out the live website, or connect, links are below:</p>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
+      <a href="https://github.com/benazirzoya/food-app" target="_blank" style="color: #f3f4f6; background-color: #1f2937; padding: 8px 16px; border-radius: 8px; text-decoration: none; font-size: 0.85rem; font-weight: bold; border: 1px solid rgba(255,255,255,0.1);">GitHub Repo</a>
+      <a href="https://portfolio-rho-tan-16.vercel.app" target="_blank" style="color: #f3f4f6; background-color: #1f2937; padding: 8px 16px; border-radius: 8px; text-decoration: none; font-size: 0.85rem; font-weight: bold; border: 1px solid rgba(255,255,255,0.1);">Portfolio</a>
+      <a href="https://www.linkedin.com/in/benazir-banu" target="_blank" style="color: #10b981; background-color: rgba(16, 185, 129, 0.1); padding: 8px 16px; border-radius: 8px; text-decoration: none; font-size: 0.85rem; font-weight: bold; border: 1px solid rgba(16, 185, 129, 0.2);">LinkedIn</a>
+      <a href="https://www.instagram.com/benazir1822" target="_blank" style="color: #ec4899; background-color: rgba(236, 72, 153, 0.1); padding: 8px 16px; border-radius: 8px; text-decoration: none; font-size: 0.85rem; font-weight: bold; border: 1px solid rgba(236, 72, 153, 0.2);">Instagram</a>
+    </div>
+  </div>
+
+</div>
